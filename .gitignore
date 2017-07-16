@@ -1,0 +1,10 @@
+node_modules/
+.localdb/
+client/bundle.js
+client/bundle.js.map
+client/styles.css
+npm-debug.log
+backend/public/
+client/styles.js
+client/styles.js.map
+client/styles.css.map
