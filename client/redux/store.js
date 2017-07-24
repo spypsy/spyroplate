@@ -3,7 +3,7 @@ import {useRouterHistory} from 'react-router';
 import {createHashHistory} from 'history';
 
 import createEngine from 'redux-storage-engine-localstorage';
-import createLogger from 'redux-logger';
+import {createLogger} from 'redux-logger';
 import {createStore, applyMiddleware} from 'redux';
 import optimistPromiseMiddleware from 'redux-optimist-promise';
 import objectToPromise from 'redux-object-to-promise';
