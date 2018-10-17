@@ -1,10 +1,10 @@
-"use strict"; //eslint-disable-line
-const env = process.env;
-const ENV = env.ENV || 'dev';
+'use strict' //eslint-disable-line
+const env = (process || { env: 'develop' }).env
+const ENV = env.ENV || 'dev'
 
-const LOCALHOST = env.LOCALHOST_IP || '0.0.0.0';
+const LOCALHOST = env.LOCALHOST_IP || '0.0.0.0'
 
-const config = {};
+const config = {}
 
 // env     = full name of the environment
 // host    = where the server is served
@@ -14,37 +14,35 @@ const config = {};
 // www     = cordova web folder
 
 switch (ENV) {
-
   case 't':
   case 'test':
-    config.env = 'test';
-    config.host = 'http://' + LOCALHOST + ':3001/';
-    config.apphost = 'http://' + LOCALHOST + ':8080/';
-    config.minify = false;
-    break;
+    config.env = 'test'
+    config.host = 'http://' + LOCALHOST + ':3001/'
+    config.apphost = 'http://' + LOCALHOST + ':8080/'
+    config.minify = false
+    break
 
   case 'd':
   case 'dev':
   case 'development':
-    config.env = 'development';
-    config.host = 'http://' + LOCALHOST + ':3000/';
-    config.minify = false;
-    break;
+    config.env = 'development'
+    config.host = 'http://' + LOCALHOST + ':3000/'
+    config.minify = false
+    break
 
   case 'p':
   case 'prod':
   case 'production':
-    config.env = 'production';
-    config.host = '';//'https://.herokuapp.com/';
-    config.minify = true;
-    config.dbUri = env.MONGODB_URI;
-    break;
+    config.env = 'production'
+    config.host = '' // 'https://.herokuapp.com/';
+    config.minify = true
+    config.dbUri = env.MONGODB_URI
+    break
 
   default:
-    throw Error('Invalid environment (ENV): ' + ENV);
-
+    throw Error('Invalid environment (ENV): ' + ENV)
 }
 
-config.api = config.host + 'api';
+config.api = config.host + 'api'
 
-export default config;
+export default config
