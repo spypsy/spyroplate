@@ -4,7 +4,7 @@
   "description": "Spyro's awesome boilerplate",
   "main": "backend/app.js",
   "scripts": {
-    "postinstall": "cd common && yarn link",
+    "postinstall": "cd common && npm link",
     "start": "node backend/www",
     "backend": "ENV=development PORT=3000 nodemon --inspect backend/www",
     "client": "cd client && ENV=development webpack-dev-server --progress --colors --watch -d --config webpack.dev.config.js",
@@ -93,7 +93,6 @@
     "eslint-plugin-react": "^6.1.2",
     "lint-staged": "^4.0.0",
     "mocha": "^3.0.2",
-    "node-sass": "^3.9.3",
     "npm": "^3.10.6",
     "prettier": "^1.4.4",
     "proxy-middleware": "^0.15.0",
