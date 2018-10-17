@@ -1,5 +1,5 @@
 'use strict' //eslint-disable-line
-const env = (process || { env: 'develop' }).env
+const env = (process || {}).env
 const ENV = env.ENV || 'dev'
 
 const LOCALHOST = env.LOCALHOST_IP || '0.0.0.0'

@@ -1,5 +1,5 @@
-require('webpack');
-const LiveReloadPlugin = require('webpack-livereload-plugin');
+const webpack = require('webpack')
+const LiveReloadPlugin = require('webpack-livereload-plugin')
 
 module.exports = {
   entry: {
@@ -31,22 +31,32 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        use: [{
-          loader: 'style-loader' // creates style nodes from JS strings
-        }, {
-          loader: 'css-loader' // translates CSS into CommonJS
-        }, {
-          loader: 'less-loader' // compiles Less to CSS
-        }]
+        use: [
+          {
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+          {
+            loader: 'less-loader', // compiles Less to CSS
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
   devtool: 'source-map',
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        ENV: JSON.stringify(process.env.ENV),
+      },
+    }),
     new LiveReloadPlugin(),
   ],
-};
+}
