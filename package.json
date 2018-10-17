@@ -6,6 +6,7 @@
   "scripts": {
     "postinstall": "cd common && npm link",
     "start": "node backend/www",
+    "server": "ENV=development NODE_ENV=development node backend/www",
     "backend": "ENV=development PORT=3000 nodemon --inspect backend/www",
     "client": "cd client && ENV=development webpack-dev-server --progress --colors --watch -d --config webpack.dev.config.js",
     "pre-commit-lint": "lint-staged",
