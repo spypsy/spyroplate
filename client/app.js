@@ -10,8 +10,6 @@ import store, { loadFromStorage, history } from './redux/store'
 const hist = syncHistoryWithStore(history, store)
 const node = document.getElementById('app')
 
-console.log(process.env)
-
 function loadReact() {
   ReactDOM.unmountComponentAtNode(node) // clean waiting screen
 

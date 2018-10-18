@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import '../styles/Application.less';
+import '../styles/Application.less'
 
 class Application extends Component {
   static propTypes = {
@@ -19,4 +19,7 @@ const mapStateToProps = state => ({})
 
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Application)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Application)
