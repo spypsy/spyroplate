@@ -2,12 +2,12 @@
 
 Welcome to my boilerplate. It's pretty minimal and not very well maintained. Use at your own risk
 
----------------------
+--------------------
 
 ## Installing
 
-Start by running 
-```npm i``` 
+Start by running
+```npm i```
 to install all dependencies
 
 You will also need `mongodb` on your machine so head [here](https://docs.mongodb.com/manual/administration/install-community/) for instructions on how to install it.
